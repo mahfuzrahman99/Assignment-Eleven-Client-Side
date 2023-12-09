@@ -6,7 +6,7 @@
 
 ## Sever Repo Link
 
-- **Live Link:** [Your-Dream-Coffee](https://github.com/mahfuzrahman99/Assignment-Eleven-Server-Side)
+- **Repo Link:** [Your-Dream-Coffee](https://github.com/mahfuzrahman99/Assignment-Eleven-Server-Side)
 
 ## Tech Stack
 
