@@ -4,9 +4,19 @@
 
 - **Live Link:** [Your-Dream-Coffee](https://the-dragon-house.web.app)
 
-## Technology's:
+## Sever Repo Link
 
-- CSS, HTML, Tailwindcss, Javascript, react, node.js, express, mongodb,
+- **Live Link:** [Your-Dream-Coffee](https://github.com/mahfuzrahman99/Assignment-Eleven-Server-Side)
+
+## Tech Stack
+
+*Client:* React, TailwindCSS, 
+
+*Server:* Node, Express
+
+*Database:* MongoDb (Mongoose) 
+
+*Authentication:* Firebase, JWT
 
 ## Overview
 
@@ -64,3 +74,5 @@
     Comments should support rich text, user avatars, and timestamps.
     Admins may have the ability to moderate and manage comments to ensure a positive and respectful discussion environment.
     The commenting system enhances user engagement, fosters community interaction, and provides valuable feedback to authors.
+
+<img alt="Home Page" src="https://i.ibb.co/Cnbg6kQ/screencapture-the-dragon-house-web-app-2023-12-09-12-58-30.png"/>
