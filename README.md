@@ -4,6 +4,10 @@
 
 - **Live Link:** [Your-Dream-Coffee](https://the-dragon-house.web.app)
 
+## Technology's:
+
+- CSS, HTML, Tailwindcss, Javascript, react, node.js, express, mongodb,
+
 ## Overview
 
 - This is a brief overview of Our website, its purpose, and the features it offers.
