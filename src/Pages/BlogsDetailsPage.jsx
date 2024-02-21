@@ -26,7 +26,7 @@ const BlogsDetailsPage = () => {
   const [allWishlistCards, setAllWishlistCards] = useState([]);
   const [comments, setComments] = useState([]);
   const location = useLocation();
-  console.log(user);
+  // console.log(user);
   const navigate = useNavigate();
   const {
     _id,
@@ -166,12 +166,7 @@ const BlogsDetailsPage = () => {
             style={{ backgroundColor: `rgba(0, 0, 0, 0.5)` }}
           >
             <p className="flex justify-between items-center">
-              <button
-                onClick={handleAddToWishlist}
-                className=" md:btn btn-sm text-black md:text-black bg-blue-400 md:bg-blue-400 rounded-md font-medium"
-              >
-                Add To Wishlist
-              </button>
+              
               {user.email === userEmail ? (
                 <Link
                   to={`/updateBlog/${_id}`}
@@ -180,7 +175,12 @@ const BlogsDetailsPage = () => {
                   Update Blog
                 </Link>
               ) : (
-                ""
+                <button
+                onClick={handleAddToWishlist}
+                className=" md:btn btn-sm text-black md:text-black bg-blue-400 md:bg-blue-400 rounded-md font-medium"
+              >
+                Add To Wishlist
+              </button>
               )}
             </p>
           </div>

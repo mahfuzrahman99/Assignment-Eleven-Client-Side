@@ -96,13 +96,6 @@ const AddsBlogs = () => {
                 placeholder="Enter Description"
                 id=""
               />
-              {/* <input
-                type="text"
-                className="w-full my-2 p-1 rounded-md"
-                name="category"
-                placeholder="Enter category"
-                id=""
-              /> */}
               <select
                 className="w-full my-2 p-1 rounded-md"
                 name="category"
@@ -116,7 +109,7 @@ const AddsBlogs = () => {
               </select>
 
               <input
-                type="date"
+                type="datetime-local"
                 className="w-full my-2 p-1 rounded-md"
                 name="date"
                 id=""

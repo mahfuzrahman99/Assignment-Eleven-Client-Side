@@ -24,14 +24,13 @@ const FeaturedBlogs = () => {
   );
 
   const tableData = sortedData
-    .slice(0, 10)
     .map((blog, index) => [
       index + 1,
       blog.title,
       `${blog.userName}`,
       <img
         key={blog._id}
-        className="h-16 rounded-3xl"
+        className="h-16 rounded-xl"
         src={blog.userPhoto}
         alt={blog.userName}
       />,
