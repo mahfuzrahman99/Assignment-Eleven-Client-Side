@@ -49,26 +49,29 @@ const PopularDetails = () => {
       (wishlistCard) => wishlistCard._id === blogDetails._id
     );
     if (!isExist) {
-      fetch("https://assignment-eleven-server-side-two.vercel.app/popularWishlist", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(newData),
-      })
+      fetch(
+        "https://assignment-eleven-server-side-two.vercel.app/popularWishlist",
+        {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(newData),
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
-         if(user){
-          if (data.insertedId) {
-            return Swal.fire({
-              title: "Success!",
-              text: "Added to Wishlist Successfully",
-              icon: "success",
-              confirmButtonText: "Cool",
-            });
+          if (user) {
+            if (data.insertedId) {
+              return Swal.fire({
+                title: "Success!",
+                text: "Added to Wishlist Successfully",
+                icon: "success",
+                confirmButtonText: "Cool",
+              });
+            }
           }
-         }
         });
     } else {
       return Swal.fire({
@@ -85,10 +88,15 @@ const PopularDetails = () => {
       <div>
         <Navbar />
       </div>
-      <div className="max-w-6xl mx-auto md:grid grid-cols-2 p-4 shadow-lg hover:border-4 hover:border-black border-2 border-gray-200 rounded-xl md:h-[450px]">
-        <div>
-          <img src={img || <Skeleton count={5}/>} className="h-full rounded-md" alt="" />
+      <div className="max-w-6xl mx-auto md:grid grid-cols-2 p-4 shadow-lg hover:border-4 hover:border-black border-2 border-gray-200 rounded-xl md:h-[470px]">
+        <div className="md:inline-block">
+          <img
+            src={img || <Skeleton count={5} />}
+            className="h-full rounded-md hover:rounded-[100px] hover:rotate-[360deg] transition-transform duration-[5000ms]"
+            alt=""
+          />
         </div>
+
         <div className="col-span-1 mt-5 ml-6">
           <div>
             <p className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-red-400 to-blue-400">
@@ -101,19 +109,22 @@ const PopularDetails = () => {
               {description}
             </p>
             <div className="card-actions justify-end">
-          <div className="card-actions justify-end">
-            <Link to={user ? `/wishlist/${_id}` : `/login`} onClick={handleAddToWishlist}>
-              <div
-                className="badge badge-outline text-black bg-blue-500 h-10 border-none rounded-md w-24"
-                data-tooltip-id="my-tooltip"
-                data-tooltip-content="Wishlist!"
-              >
-                <BsFillBookmarksFill />
+              <div className="card-actions justify-end">
+                <Link
+                  to={user ? `/wishlist/${_id}` : `/login`}
+                  onClick={handleAddToWishlist}
+                >
+                  <div
+                    className="badge badge-outline text-black bg-blue-500 h-10 border-none rounded-md w-24"
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content="Wishlist!"
+                  >
+                    <BsFillBookmarksFill />
+                  </div>
+                </Link>
+                <Tooltip id="my-tooltip" />
               </div>
-            </Link>
-            <Tooltip id="my-tooltip" />
-          </div>
-        </div>
+            </div>
           </div>
         </div>
       </div>
